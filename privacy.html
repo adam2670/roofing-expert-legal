@@ -38,10 +38,23 @@
 
 <h2>The short version</h2>
 <p>Roofing Expert stores your inspection reports and photos <strong>on your device</strong>. We do not collect, receive, sell, or share your data, and we do not run analytics, advertising, or tracking of any kind.</p>
-<p>The App also includes an optional feature called <strong>Company Sync</strong>, which lets a company share reports between its own people. <strong>Company Sync is off unless you turn it on.</strong> When it is on, the reports you publish are stored in <strong>your own Apple iCloud account</strong> using Apple&rsquo;s CloudKit service, and are visible to the people you invite. They are not sent to us.</p>
+<p>Two things do leave the device, and both are described in full below. <strong>Storm checking</strong> sends an approximate location and a date to weather services, so the App can tell you what the weather did at a property on a given day. And the optional <strong>Company Sync</strong> feature, which is <strong>off unless you turn it on</strong>, stores the reports you publish in <strong>your own Apple iCloud account</strong> so the people you invite can open them. Neither sends anything to us.</p>
 
 <h2>Information the App handles — and where it stays</h2>
 <p><strong>On your device, always.</strong> Inspection reports, the photos you capture, measurements, notes, customer name and address, carrier and claim number if you enter them, and your app settings are stored on the device. If you use iCloud Backup, your device&rsquo;s backup may include them, in the same way it includes other app data. That backup is controlled by you in iOS Settings.</p>
+
+
+<h2>Storm checking — what leaves the device, and what does not</h2>
+<p>Roofing Expert can tell you what the weather did at a property on a particular day. To do that it asks public weather services about a location.</p>
+<p><strong>What is sent:</strong> an <strong>approximate</strong> latitude and longitude, and a date. The coordinates are deliberately <strong>rounded to two decimal places — roughly one kilometre</strong> — before they leave the device. That is precise enough to place a storm and not precise enough to place a house.</p>
+<p><strong>What is not sent:</strong> no name, no street address, no carrier or claim number, no report contents, no photographs, and no identifier for you or your device. The request contains the rounded coordinate and the date, and nothing else about the job.</p>
+<p>Those requests go to two independent services, each operating under its own privacy policy and not controlled by us:</p>
+<ul>
+  <li><strong>Open-Meteo</strong> — a historical weather archive, for wind gusts, wind speed and precipitation on the day in question.</li>
+  <li><strong>The Iowa Environmental Mesonet</strong>, operated by Iowa State University — for National Weather Service local storm reports near that location.</li>
+</ul>
+<p>Hail radar works differently and is worth stating plainly: the App downloads a <strong>national</strong> radar archive file from NOAA&rsquo;s public dataset by <strong>date only</strong>, and reads the value for your location <strong>on your device</strong>. No coordinates are sent for that request.</p>
+<p><strong>Storm checking does not depend on Company Sync.</strong> It works whether Company Sync is on or off, so &ldquo;off by default&rdquo; describes Company Sync and <strong>not</strong> location generally. If you never use storm checking, no location leaves the device this way.</p>
 
 <h2>Company Sync — what leaves the device when you turn it on</h2>
 <p>Company Sync is <strong>off by default</strong>. Turning it on lets you publish reports to a shared company area so that people you invite can open them.</p>
@@ -63,6 +76,7 @@
 <ul>
   <li>We do not collect, receive, or store your reports, photos, or customer information on any system of ours. We do not operate a server. When Company Sync is on, the App writes to <em>your</em> iCloud account, not to us.</li>
   <li>We do not use analytics, advertising, tracking, or third-party SDKs that profile you.</li>
+  <li>We do not send your customer&rsquo;s name, address, or any report content to the weather services. They receive a rounded coordinate and a date.</li>
   <li>We do not sell or share your information with anyone.</li>
   <li>Company Sync does not make your data public. It is shared only with people the company owner invites.</li>
 </ul>
